@@ -1,0 +1,181 @@
+:root {
+  --primary-first-color: #3ab2c1;
+  --primary-second-color: #06707e;
+  --primary-third-color: #404041;
+
+  --secondary-first-color: #c18272;
+  --secondary-second-color: #ef925d;
+  --secondary-third-color: #fbd84b;
+
+  --neutral-first-color: #ffffff;
+  --neutral-second-color: #d1d0cf;
+  --neutral-third-color: #fbf9f3;
+
+  --primary-first-color-alpha: rgba(58, 178, 193, 0.53);
+  --primary-first-color-alpha-second: rgba(58, 178, 193, 0.3);
+  --primary-second-color-alt: #1d5f5f;
+  --primary-third-color-alpha: rgba(64, 64, 65, .3);
+
+  --secondary-first-color-alpha: rgba(193, 130, 114, .53);
+  --secondary-second-color-alpha: rgba(239, 146, 93, .65);
+
+  --title-font: 'Neuton Regular', serif;
+  --subtitle-font: 'Helvetica Neue', sans-serif;
+  --content-font: 'Neuton Light', serif;
+  --icons-font: 'Font Awesome 5 Free';
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaNeue.otf') format('opentype')
+}
+
+@font-face {
+  font-family: 'Neuton Light';
+  src: url('../fonts/NeutonLight.ttf') format('opentype')
+}
+
+@font-face {
+  font-family: 'Neuton Regular';
+  src: url('../fonts/Neuton.ttf') format('opentype')
+}
+
+body, html {
+  padding: 0;
+  margin: 0;
+  color: var(--primary-third-color);
+  font-family: var(--content-font);
+  background-color:var(--neutral-third-color);
+  font-size: 1.1rem;
+  height: 100vw;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+h1, h2, h3, p {
+  font-weight: normal;
+  margin:0;
+}
+
+h1 {
+  font-family: var(--title-font);
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: var(--title-font);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-family: var(--subtitle-font);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.certificate {
+  float:right;
+  color: var(--primary-second-color);
+  font-family: var(--subtitle-font);
+  font-size: 1.1rem;
+  padding: .2rem;
+  margin-left: 1rem;
+}
+
+.container {
+  background-color:#fff;
+  margin:2rem auto;
+  max-width: 1240px;
+  box-shadow: 0 0 2rem rgba(50,50,50,0.1)
+}
+
+header {
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+header #isotipo {
+  height: 5rem;
+  margin-right: 1rem;
+  display:block;
+}
+
+header #anagrama {
+  height: 3rem;
+  display:block;
+}
+
+section {
+  padding: 2rem;
+}
+
+.group {
+  display:grid;
+  grid-template-columns: 1fr 5fr;
+  grid-gap: 0 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.group:nth-last-of-type(n + 2){
+  border-bottom: 1px solid var(--primary-third-color-alpha);
+}
+
+.group p {
+  grid-column: 2 / 3;
+}
+
+.table {
+  display:grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 0 1rem;
+  font-size: 1.2rem;
+}
+
+.table b, .group b {
+  text-align: right;
+}
+
+#information {
+  background-color: var(--primary-first-color-alpha-second);
+}
+
+#information img {
+  float:right;
+  height: 10rem;
+  box-shadow: 0 0 2rem rgba(0,0,0,0.2);
+}
+
+#experience {
+  background-color: var(--neutral-third-color);
+}
+
+#others  {
+  background-color: var(--neutral-third-color);
+}
+
+footer {
+  background-image: url('/images/footer.svg');
+  background-size: 120%;
+  background-position: left -1rem top 0;
+  background-repeat: no-repeat;
+  height: 20rem;
+  margin-top: 4rem;
+}
+
+@media print {
+  body, html {
+    background-color:#75c7ca;
+  }
+  .container {
+    box-shadow: 0 0 0;
+    margin:0;
+  }
+}
